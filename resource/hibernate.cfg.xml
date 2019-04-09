@@ -26,6 +26,8 @@
         <!-- 映射实体类  -->
         <mapping resource="com/hibernate/entity/Student.hbm.xml" />
         <mapping resource="com/hibernate/entity/Classes.hbm.xml" />
+        <mapping resource="com/hibernate/entity/Department.hbm.xml" />
+        <mapping resource="com/hibernate/entity/Employee.hbm.xml" />
 
     </session-factory>
 

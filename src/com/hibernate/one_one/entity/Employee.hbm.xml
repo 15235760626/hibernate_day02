@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.hibernate.one_one.entity">
+
+    <class name="Employee" table="employee">
+        <id name="id" column="e_id" type="java.lang.Integer">
+            <generator class="native"/>
+        </id>
+
+        <property name="name" type="java.lang.String" column="e_name"/>
+
+        <!--
+        cascade="save-update" 级联添加修改
+        -->
+        <many-to-one name="joinPart" class="JoinPart" column="j_id" cascade="save-update"></many-to-one>
+
+    </class>
+
+</hibernate-mapping>

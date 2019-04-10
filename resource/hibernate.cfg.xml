@@ -14,7 +14,7 @@
         <property name="connection.password">123</property>
 
         <!-- SQL dialect  数据库引擎 -->
-        <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        <property name="dialect">org.hibernate.dialect.MySQL57InnoDBDialect</property>
 
 
         <!-- Echo all executed SQL to stdout 执行打印SQL -->
@@ -24,10 +24,15 @@
         <property name="hbm2ddl.auto">update</property>
 
         <!-- 映射实体类  -->
-        <mapping resource="com/hibernate/entity/Student.hbm.xml" />
+<!--        <mapping resource="com/hibernate/entity/Student.hbm.xml" />
         <mapping resource="com/hibernate/entity/Classes.hbm.xml" />
+        <mapping resource="com/hibernate/one_one/entity/HubBand.hbm.xml" />
+        <mapping resource="com/hibernate/one_one/entity/Wife.hbm.xml" />
         <mapping resource="com/hibernate/entity/Department.hbm.xml" />
-        <mapping resource="com/hibernate/entity/Employee.hbm.xml" />
+        <mapping resource="com/hibernate/entity/Employee.hbm.xml" />-->
+        <mapping resource="com/hibernate/one_one/entity/Employee.hbm.xml" />
+        <mapping resource="com/hibernate/one_one/entity/JoinPart.hbm.xml" />
+
 
     </session-factory>
 

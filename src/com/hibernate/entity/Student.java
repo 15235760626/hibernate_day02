@@ -51,6 +51,7 @@ public class Student {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", age=" + age +
+                ", classes=" + classes.getName() +
                 '}';
     }
 }

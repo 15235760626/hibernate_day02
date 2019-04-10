@@ -10,7 +10,15 @@
             <generator class="native"/>
         </id>
         <property name="name" type="java.lang.String" column="name"/>
-
+        <!--
+            inverse="true  双向绑定
+            save-update    联机添加修改
+            delete         联机删除
+        "-->
+        <set name="students" cascade="delete" inverse="true" >
+            <key column="cid"></key>
+            <one-to-many class="Student" ></one-to-many>
+        </set>
 
     </class>
 

@@ -1,5 +1,8 @@
 package com.hibernate.entity;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * @author :Mr.Xu
  * Date    :2019-4-9
@@ -7,6 +10,7 @@ package com.hibernate.entity;
 public class Classes {
     private Integer cid;
     private String name;
+    private Set<Student> students = new HashSet<Student>();
 
     public Integer getCid() {
         return cid;
@@ -24,11 +28,20 @@ public class Classes {
         this.name = name;
     }
 
+    public Set<Student> getStudents() {
+        return students;
+    }
+
+    public void setStudents(Set<Student> students) {
+        this.students = students;
+    }
+
     @Override
     public String toString() {
         return "Classes{" +
                 "cid=" + cid +
-                ", name=" + name +
+                ", name='" + name + '\'' +
+                ", students=" + students +
                 '}';
     }
 }

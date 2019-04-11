@@ -821,76 +821,23 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <table id="207" parent="9" name="menu"/>
-    <table id="208" parent="9" name="role"/>
-    <table id="209" parent="9" name="role_menu"/>
-    <column id="210" parent="207" name="m_id">
+    <table id="207" parent="9" name="user"/>
+    <column id="208" parent="207" name="u_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="211" parent="207" name="name">
+    <column id="209" parent="207" name="account">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="212" parent="207" name="PRIMARY">
+    <key id="210" parent="207" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>m_id</ColNames>
+      <ColNames>u_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="213" parent="208" name="r_id">
-      <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="214" parent="208" name="name">
-      <Position>2</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="215" parent="208" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>r_id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="216" parent="209" name="r_id">
-      <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="217" parent="209" name="m_id">
-      <Position>2</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <index id="218" parent="209" name="FKnhbv3lfsp92hx92jbbwd0k3hr">
-      <ColNames>m_id</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="219" parent="209" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>r_id
-m_id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <foreign-key id="220" parent="209" name="FKicy3qcjyxam863wlbkocaamup">
-      <ColNames>r_id</ColNames>
-      <RefSchemaName>test</RefSchemaName>
-      <RefTableName>role</RefTableName>
-      <RefColNames>r_id</RefColNames>
-    </foreign-key>
-    <foreign-key id="221" parent="209" name="FKnhbv3lfsp92hx92jbbwd0k3hr">
-      <ColNames>m_id</ColNames>
-      <RefSchemaName>test</RefSchemaName>
-      <RefTableName>menu</RefTableName>
-      <RefColNames>m_id</RefColNames>
-    </foreign-key>
   </database-model>
 </dataSource>

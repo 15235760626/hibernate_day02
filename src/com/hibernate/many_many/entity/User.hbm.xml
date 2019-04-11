@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.hibernate.many_many.entity">
+
+    <class name="User" table="user">
+        <id name="id" column="u_id" type="java.lang.Integer">
+            <generator class="native"/>
+        </id>
+        <property name="name" type="java.lang.String" column="account"/>
+
+    </class>
+
+    <query name="queryUser">
+        <![CDATA[from User u where u.name like :name]]>
+    </query>
+
+</hibernate-mapping>

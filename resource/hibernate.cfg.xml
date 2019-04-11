@@ -24,11 +24,13 @@
         <property name="hbm2ddl.auto">update</property>
 
         <!-- 映射实体类  -->
-        <mapping resource="com/hibernate/entity/User.hbm.xml" />
+<!--        <mapping resource="com/hibernate/entity/User.hbm.xml" />
         <mapping resource="com/hibernate/entity/Menu.hbm.xml" />
         <mapping resource="com/hibernate/entity/Role.hbm.xml" />
         <mapping class="com.hibernate.many_many.entity.Menu"/>
-        <mapping class="com.hibernate.many_many.entity.Role"/>
+        <mapping class="com.hibernate.many_many.entity.Role"/>-->
+        <mapping resource="com/hibernate/many_many/entity/User.hbm.xml"/>
+
 
 
 

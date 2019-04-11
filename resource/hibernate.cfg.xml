@@ -27,6 +27,9 @@
         <mapping resource="com/hibernate/entity/User.hbm.xml" />
         <mapping resource="com/hibernate/entity/Menu.hbm.xml" />
         <mapping resource="com/hibernate/entity/Role.hbm.xml" />
+        <mapping class="com.hibernate.many_many.entity.Menu"/>
+        <mapping class="com.hibernate.many_many.entity.Role"/>
+
 
 
     </session-factory>

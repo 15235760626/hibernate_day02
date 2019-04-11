@@ -5,8 +5,8 @@
 
 <hibernate-mapping package="com.hibernate.entity">
 
-    <class name="Classes" table="t_classes">
-        <id name="cid" column="c_id" type="java.lang.Integer">
+    <class name="Menu" table="menu">
+        <id name="id" column="m_id" type="java.lang.Integer">
             <generator class="native"/>
         </id>
         <property name="name" type="java.lang.String" column="name"/>
@@ -15,9 +15,9 @@
             save-update    联机添加修改
             delete         联机删除
         "-->
-        <set name="students" cascade="delete" inverse="true" >
-            <key column="cid"></key>
-            <one-to-many class="Student" ></one-to-many>
+        <set name="roleSet" table="role_menu"  cascade="save-update"   >
+            <key column="m_id"></key>
+            <many-to-many column="r_id" class="Role" ></many-to-many>
         </set>
 
     </class>

@@ -24,14 +24,9 @@
         <property name="hbm2ddl.auto">update</property>
 
         <!-- 映射实体类  -->
-<!--        <mapping resource="com/hibernate/entity/Student.hbm.xml" />
-        <mapping resource="com/hibernate/entity/Classes.hbm.xml" />
-        <mapping resource="com/hibernate/one_one/entity/HubBand.hbm.xml" />
-        <mapping resource="com/hibernate/one_one/entity/Wife.hbm.xml" />
-        <mapping resource="com/hibernate/entity/Department.hbm.xml" />
-        <mapping resource="com/hibernate/entity/Employee.hbm.xml" />-->
-        <mapping resource="com/hibernate/one_one/entity/Employee.hbm.xml" />
-        <mapping resource="com/hibernate/one_one/entity/JoinPart.hbm.xml" />
+        <mapping resource="com/hibernate/entity/User.hbm.xml" />
+        <mapping resource="com/hibernate/entity/Menu.hbm.xml" />
+        <mapping resource="com/hibernate/entity/Role.hbm.xml" />
 
 
     </session-factory>

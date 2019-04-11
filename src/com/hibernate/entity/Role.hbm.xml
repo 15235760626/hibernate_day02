@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.hibernate.entity">
+
+    <class name="Role" table="role">
+        <id name="id" column="r_id" type="java.lang.Integer">
+            <generator class="native"/>
+        </id>
+        <property name="name" type="java.lang.String" column="name"/>
+
+
+        <set name="userSet" table="user_role"  cascade="save-update"  >
+            <key column="r_id"></key>
+            <many-to-many column="u_id" class="User"></many-to-many>
+        </set>
+
+
+        <set name="menuSet" table="role_menu"  cascade="save-update"  >
+            <key column="r_id"></key>
+            <many-to-many column="m_id" class="Menu" ></many-to-many>
+        </set>
+
+    </class>
+
+</hibernate-mapping>
